@@ -1,0 +1,100 @@
+$color-primary: #590b11;
+$color-title: #3c3950;
+$color-text: #f2f2f2;
+$color-border: rgba(#ccc, 0.5);
+
+//Importar bootstrap
+@import "bootstrap/bootstrap";
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: $color-text;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: $color-title;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//header
+
+header {
+  h1 {
+    font-size: 30px;
+    padding: 20px 0;
+  }
+
+  //top-header
+  .top-header {
+    background: $color-primary;
+    padding: 5px 0px;
+    a {
+      color: $color-text;
+      font-weight: 600;
+      padding: 0px 5px;
+    }
+  }
+  .main-logo {
+    background: url("../img/logo.png");
+   //  height: 75px;
+   //  width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      color: $color-title;
+      font-weight: 600;
+      padding: 3px 15px;
+    }
+  }
+
+  .login {
+    text-align: center;
+    width: 200px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 76px;
+      width: 1px;
+      background: $color-border;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
